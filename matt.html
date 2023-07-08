@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Giacobbe</title>
+    <link rel="stylesheet" href="mattstyle.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="words">
+        <ul class="matthew">
+            <li class="letter first" id="f1">M</li>
+            <li class="letter first" id="f2">a</li>
+            <li class="letter first" id="f3">t</li>
+            <li class="letter first" id="f4">t</li>
+            <li class="letter first" id="f5">h</li>
+            <li class="letter first" id="f6">e</li>
+            <li class="letter first" id="f7">w</li>
+        </ul>
+        <div class="giacobbe">
+            <div class="letter last" id="l1">G</div>
+            <div class="letter last" id="l2">i</div>
+            <div class="letter last" id="l3">a</div>
+            <div class="letter last" id="l4">c</div>
+            <div class="letter last" id="l5">o</div>
+            <div class="letter last" id="l6">b</div>
+            <div class="letter last" id="l7">b</div>
+            <div class="letter last" id="l8">e</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.letter').hover(function(e){
+            curr = "#" + e.currentTarget.attributes['id']['nodeValue'];
+            color = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")"
+            $(curr).css("color",color)
+            $(curr).css("transform", "scale(125%)")
+        }, function(e){
+            curr = "#" + e.currentTarget.attributes['id']['nodeValue'];
+            $(curr).css("color","white")
+            $(curr).css("transform", "scale(100%)")
+        })
+    </script>
+</body>
+</html>
