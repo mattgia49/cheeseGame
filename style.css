@@ -5,13 +5,13 @@
 }
 
 .counterSec {
-    padding: 5px;
+    padding: 20px;
     height: 33%;
     text-align: center;
 }
 
 .counter {
-    height: 100px;
+    height: 300px;
     width: 400px;
     margin: 10px;
 }
@@ -30,9 +30,13 @@
 }
 
 .milkCounter {
-    background-color: white;
+    background-image: url('cow\ Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border: solid 7px black;
     border-radius: 10px;
+    
 }
 
 .buttonDiv {
@@ -52,7 +56,15 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+#milkAmount {
+    color: aliceblue;
+    margin: auto;
+    padding: 10px;
+     
+    text-align: center; 
+    font-weight: 700;
+    font-size: x-large;
+}
 
 
 
