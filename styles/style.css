@@ -30,13 +30,13 @@
 }
 
 .milkCounter {
-    background-image: url('cow\ Background.jpg');
+    background-image: url('../imgs/cow\ Background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border: solid 7px black;
     border-radius: 10px;
-    
+
 }
 
 .buttonDiv {
@@ -60,17 +60,8 @@
     color: aliceblue;
     margin: auto;
     padding: 10px;
-     
-    text-align: center; 
+
+    text-align: center;
     font-weight: 700;
     font-size: x-large;
 }
-
-
-
-
-
-
-
-
-
