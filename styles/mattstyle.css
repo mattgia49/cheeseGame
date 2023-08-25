@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+.navbar {
+    z-index: 1;
+}
+
 .bg {
     width: 100%;
     height: 100%;
@@ -11,6 +15,8 @@
     background-size: cover;
     background-position: center;
     position: absolute;
+    top:0px;
+    z-index: 0;
 }
 
 .words {
