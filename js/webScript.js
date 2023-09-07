@@ -9,7 +9,7 @@ canvas.addEventListener('resize', function(){
     canvas.height = window.innerHeight;
 })
 
-ctx.fillStyle = "red"
+ctx.fillStyle = "white"
 ctx.lineWidth = 3
 ctx.beginPath()
 ctx.roundRect(100, 100, 100, 100, [25])
