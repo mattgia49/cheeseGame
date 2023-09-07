@@ -9,9 +9,12 @@ canvas.addEventListener('resize', function(){
     canvas.height = window.innerHeight;
 })
 
-ctx.fillStyle = "white"
-ctx.lineWidth = 3
-ctx.beginPath()
-ctx.roundRect(100, 100, 100, 100, [25])
-ctx.fill()
-ctx.stroke()
+canvas.addEventListener('click', function(e){
+    console.log(e)
+})
+
+
+let currProj = new Project("Test Proj")
+
+
+currProj.draw(ctx)
