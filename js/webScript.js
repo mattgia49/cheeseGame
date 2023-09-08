@@ -1,6 +1,12 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext('2d');
 
+let currProj = null
+
+let currView = null
+
+let nb = new Navbar()
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -10,11 +16,22 @@ canvas.addEventListener('resize', function(){
 })
 
 canvas.addEventListener('click', function(e){
-    console.log(e)
+    if (currProj == null && currView == null) {
+        if(nb.checkClick(e.x, e.y)){
+            nb.open(ctx)
+        }
+    }
 })
 
+window.requestAnimationFrame(draw)
 
-let currProj = new Project("Test Proj")
 
+function draw(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-currProj.draw(ctx)
+    if (currProj == null && currView == null) {
+        nb.draw(ctx)
+    }
+    window.requestAnimationFrame(draw)
+
+}
