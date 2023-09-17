@@ -18,7 +18,7 @@ canvas.addEventListener('resize', function(){
 canvas.addEventListener('click', function(e){
     if (currProj == null && currView == null) {
         if(nb.checkClick(e.x, e.y)){
-            nb.open(ctx)
+            nb.toggle()
         }
     }
 })
