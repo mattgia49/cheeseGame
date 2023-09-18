@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,36 +23,38 @@
     </script>
     <title>TBD</title>
 </head>
+
 <body>
 
     <div class="game">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="cheese.html">Cheese</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="matt.html">Matt</a>
-                </li>
-            </ul>
-        </div>
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cheese.html">Cheese</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="matt.html">Matt</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <div class="counters">
-            <div class="milkCounter counter">
+            <div class="milkCounter counter" id="milk">
                 <div class="counterSec" id="milkTitle">Milk Counter</div>
                 <div class="counterSec" id="milkAmount">0</div>
                 <div class="counterSec" id="milkLabel">Milk Cartons</div>
             </div>
-            <div class="cheeseCounter counter">
+            <div class="cheeseCounter counter" id="cheese">
                 <div class="counterSec" id="cheeseTitle">Cheese Counter</div>
                 <div class="counterSec" id="cheeseAmount">0</div>
                 <div class="counterSec" id="cheeseLabel">Cheese Cubes</div>
@@ -64,8 +67,6 @@
 
         </div>
         <div class="buttonDiv">
-            <button type="button" class="btn btn-light counterButton" id="milkButton">Milk</button>
-            <button type="button" class="btn btn-light counterButton" id="cheeseButton">Cheese</button>
             <div id="price"></div>
             <button type="button" class="btn btn-light priceButton" id="downPrice">-</button>
             <button type="button" class="btn btn-light priceButton" id="upPrice">+</button>
@@ -79,7 +80,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
 
-        function updateValues(){
+        function updateValues() {
             $("#price")[0].innerHTML = "Price: $" + dPrice.toFixed(2);
             $("#demand")[0].innerHTML = "Demand: " + demand + "%";
             $("#cheeseAmount")[0].innerText = cheeseCount;
@@ -90,40 +91,44 @@
         calcDemand()
         updateValues();
 
-        $(".priceButton").on("click", function(e){
+        $(".priceButton").on("click", function (e) {
             currButton = e.target.id;
-            if(currButton == 'downPrice'){
+            if (currButton == 'downPrice') {
                 price -= 1;
-            } else  {
+            } else {
                 price += 1;
             }
             dPrice = price / 100;
             updateValues();
         });
 
-        $(".counterButton").on("click", function(e){
-            currButton = e.target.id;
-            if(currButton == "cheeseButton" && milkCount >= 5) {
+        $("#cheese").on("click", function (e) {
+
+
+            if (milkCount >= 0) {
                 cheeseCount += 1;
                 milkCount -= 5;
-                updateValues()
-            } else if (currButton == "milkButton"){
-                milkCount += 1;
-                updateValues()
+                updateValues();
             }
+        });
+        $("#milk").on("click", function (e) {
+
+            milkCount += 1;
+            updateValues();
+
 
         });
 
-        function calcDemand(){
+        function calcDemand() {
             demand = Math.floor(marketing / price * 10000) / 100;
         }
 
-        function gameUpdate(){
+        function gameUpdate() {
 
             calcDemand();
             console.log(demand)
-            if(Math.random() < demand / 1000) {
-                if(cheeseCount >= 1) {
+            if (Math.random() < demand / 1000) {
+                if (cheeseCount >= 1) {
                     cheeseCount -= 1;
                     bankAccount += dPrice;
                     updateValues()
@@ -138,4 +143,5 @@
     </script>
 
 </body>
+
 </html>
