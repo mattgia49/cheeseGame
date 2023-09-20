@@ -30,6 +30,41 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(function() {
+           $("#navbar").load("../assets/navbarTab.html");
+        });
+     </script>
+
+    <div class="game">
+        <nav id="navbar"></nav>
+        <div class="counters">
+            <div class="milkCounter counter" id="milk">
+                <div class="counterSec" id="milkTitle">Milk Counter</div>
+                <div class="counterSec" id="milkAmount">0</div>
+                <div class="counterSec" id="milkLabel">Milk Cartons</div>
+            </div>
+            <div class="cheeseCounter counter" id="cheese">
+                <div class="counterSec" id="cheeseTitle">Cheese Counter</div>
+                <div class="counterSec" id="cheeseAmount">0</div>
+                <div class="counterSec" id="cheeseLabel">Cheese Cubes</div>
+            </div>
+            <div class="moneyCounter counter">
+                <div class="counterSec" id="moneyTitle">Money Counter</div>
+                <div class="counterSec" id="moneyAmount">0</div>
+                <div class="counterSec" id="moneyLabel">Dollars</div>
+            </div>
+
+        </div>
+        <div class="buttonDiv">
+            <div id="price"></div>
+            <button type="button" class="btn btn-light priceButton" id="downPrice">-</button>
+            <button type="button" class="btn btn-light priceButton" id="upPrice">+</button>
+            <div id="demand"></div>
+        </div>
+
+    </div>
     <script>
 
         function updateValues() {
@@ -93,40 +128,6 @@
 
 
     </script>
-    <script>
-        $(function() {
-           $("#navbar").load("../assets/navbarTab.html");
-        });
-     </script>
-
-    <div class="game">
-        <nav id="navbar"></nav>
-        <div class="counters">
-            <div class="milkCounter counter" id="milk">
-                <div class="counterSec" id="milkTitle">Milk Counter</div>
-                <div class="counterSec" id="milkAmount">0</div>
-                <div class="counterSec" id="milkLabel">Milk Cartons</div>
-            </div>
-            <div class="cheeseCounter counter" id="cheese">
-                <div class="counterSec" id="cheeseTitle">Cheese Counter</div>
-                <div class="counterSec" id="cheeseAmount">0</div>
-                <div class="counterSec" id="cheeseLabel">Cheese Cubes</div>
-            </div>
-            <div class="moneyCounter counter">
-                <div class="counterSec" id="moneyTitle">Money Counter</div>
-                <div class="counterSec" id="moneyAmount">0</div>
-                <div class="counterSec" id="moneyLabel">Dollars</div>
-            </div>
-
-        </div>
-        <div class="buttonDiv">
-            <div id="price"></div>
-            <button type="button" class="btn btn-light priceButton" id="downPrice">-</button>
-            <button type="button" class="btn btn-light priceButton" id="upPrice">+</button>
-            <div id="demand"></div>
-        </div>
-
-    </div>
 </body>
 
 </html>
