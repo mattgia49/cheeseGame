@@ -1,4 +1,3 @@
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,35 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="tabs/cheese.html">Cheese</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="tabs/matt.html">Matt</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tabs/webMaker.html">Web Maker</a>
-        </li>
-      </ul>
-    </div>
-    </nav>
     
-    <div id="homeText">Tst</div>
-
-    <script src="js/home.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script>
+        $(function() {
+           $("#navbar").load("assets/navbar.html");
+        });
+     </script>
+    <nav id="navbar"></nav>
+    <div id="homeText"></div>
+    <script src="js/home.js"></script>
 
 </body>
 </html>
