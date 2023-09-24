@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Maker</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/webStyle.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/webStyle.css') }}">
 </head>
 <body>
     
@@ -18,10 +18,10 @@
      </script>
     
     <canvas id="canvas1"></canvas>
-    <script src="../js/project.js"></script>
-    <script src="../js/term.js"></script>
-    <script src="../js/navbar.js"></script>
-    <script src="../js/webScript.js"></script>
+    <script src="{{ url_for('static',filename='js/project.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/term.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/navbar.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/webScript.js') }}"></script>
     <nav id="navbar"></nav>
 </body>
 </html>
