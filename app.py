@@ -11,11 +11,11 @@ def cheese():
     return render_template("cheese.html")
 
 @app.route("/matt")
-def cheese():
-    return render_template("cheese.html")
+def matt():
+    return render_template("matt.html")
 
 @app.route("/webMaker")
-def cheese():
-    return render_template("cheese.html")
+def webMaker():
+    return render_template("webMaker.html")
 
 app.run(host="0.0.0.0", port=80)
