@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Giacobbe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/op.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function() {
+           $("#navbar").load("../assets/navbarTab.html");
+        });
+     </script>
+
+    <nav id="navbar"></nav>
+    <div class="translator">
+        <div class="lang1">
+            <h1>English</h1>
+            <textarea name="input" id="input"></textarea>
+        </div>
+        <div class="swap"></div>
+        <div class="lang2">
+            <h1>Op</h1>
+            <textarea name="output" id="output" readonly></textarea>
+        </div>
+    </div>
+    <div class="buttonHolder">
+        <h3 id="translate">TRANSLATE</h3>
+    </div>
+
+    <script src="../js/op.js"></script>
+</body>
+</html>
