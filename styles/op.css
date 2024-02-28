@@ -47,5 +47,10 @@ h1 {
     width: 50px;
     aspect-ratio: 1;
     border: 1px solid black;
+}
 
+#speak {
+    border: 1px solid black;    
+    cursor: pointer;
+    user-select: none;
 }

@@ -1,6 +1,16 @@
 var input = 1
 var prevInput = ""
 
+document.getElementById("speak").addEventListener("click", function(){
+    const message = new SpeechSynthesisUtterance();
+
+    message.text = document.getElementById("output").value;
+
+    const speechSynthesis = window.speechSynthesis;
+
+    speechSynthesis.speak(message);
+})
+
 document.getElementById("translate").addEventListener("click", function(){
     inText = document.getElementById("input").value
 
