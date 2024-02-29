@@ -10,6 +10,7 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d97dfe7b01.js" crossorigin="anonymous"></script>
 
     <script>
         $(function() {
@@ -24,11 +25,14 @@
             <textarea name="input" id="input"></textarea>
         </div>
         <div>
-            <div id="swap"></div>
+            <div id="swap">
+                <i class="fa-solid fa-right-left" style="scale: 250%; position: relative; top: 16px; left: 16px;"></i>
+            </div>
         </div>
         <div class="lang2">
             <h1 id="outputLang">Op</h1>
             <textarea name="output" id="output" readonly></textarea>
+            <i id="speak" class="fa-solid fa-volume-high"></i>
         </div>
     </div>
     <div class="buttonHolder">
