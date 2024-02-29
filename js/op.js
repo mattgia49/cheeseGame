@@ -3,11 +3,10 @@ var prevInput = ""
 
 document.getElementById("speak").addEventListener("click", function(){
     const message = new SpeechSynthesisUtterance();
-
     message.text = document.getElementById("output").value;
 
     const speechSynthesis = window.speechSynthesis;
-
+    
     speechSynthesis.speak(message);
 })
 
@@ -23,24 +22,24 @@ document.getElementById("translate").addEventListener("click", function(){
             if("aeiou".includes(inText[i]))
             {
                 outText += inText[i]
-                outText += " "
+                outText += "  "
             }
             else if (" " == inText[i] && "aeioubcdfghjklmnpqrstvwxyz".includes(inText[i - 1]))
             {
                 outText += "po"
-                outText += " "
+                outText += "  "
             }
             else if("bcdfghjklmnpqrstvwxyz".includes(inText[i].toLowerCase()))
             {
                 outText += inText[i] + "op"
-                outText += " "
+                outText += "  "
             } 
             else 
             {
                 if(inText[i]!=" ")
                 {
                     outText += inText[i]
-                    outText += " "
+                    outText += "  "
                 }
             }
 
