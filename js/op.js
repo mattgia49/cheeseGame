@@ -2,13 +2,15 @@ var input = 1
 var prevInput = ""
 
 document.getElementById("speak").addEventListener("click", function(){
-    const message = new SpeechSynthesisUtterance();
+    // const message = new SpeechSynthesisUtterance();
+    // message.text = document.getElementById("output").value;
 
-    message.text = document.getElementById("output").value;
-
-    const speechSynthesis = window.speechSynthesis;
-
-    speechSynthesis.speak(message);
+    // const speechSynthesis = window.speechSynthesis;
+    
+    // speechSynthesis.speak(message);
+    
+    var audio = new Audio("../The Missile Knows Where It Is....mp3")
+    audio.play()
 })
 
 document.getElementById("translate").addEventListener("click", function(){
@@ -23,24 +25,24 @@ document.getElementById("translate").addEventListener("click", function(){
             if("aeiou".includes(inText[i]))
             {
                 outText += inText[i]
-                outText += " "
+                outText += "  "
             }
             else if (" " == inText[i] && "aeioubcdfghjklmnpqrstvwxyz".includes(inText[i - 1]))
             {
                 outText += "po"
-                outText += " "
+                outText += "  "
             }
             else if("bcdfghjklmnpqrstvwxyz".includes(inText[i].toLowerCase()))
             {
                 outText += inText[i] + "op"
-                outText += " "
+                outText += "  "
             } 
             else 
             {
                 if(inText[i]!=" ")
                 {
                     outText += inText[i]
-                    outText += " "
+                    outText += "  "
                 }
             }
 
