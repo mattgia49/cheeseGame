@@ -17,7 +17,15 @@
         });
      </script>
     <nav id="navbar"></nav>
-    <div id="homeText"></div>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(10, 10, 150, 100);
+    </script>
     <script src="js/home.js"></script>
 
 </body>
