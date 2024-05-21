@@ -4,3 +4,8 @@
     height: inherit;
     aspect-ratio: 1;
 }
+
+#canvas
+{
+    border: 1px black solid;
+}
