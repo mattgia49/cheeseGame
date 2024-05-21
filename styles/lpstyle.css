@@ -8,5 +8,6 @@
 #canvas
 {
     border: 1px black solid;
-    background-color: aqua;
+    width: 150px;
+    aspect-ratio: 1;
 }
