@@ -36,7 +36,7 @@
                     "J": "This is the letter J because it is the letter J. It is the tenth letter of the aplhabet"}
 
             window.addEventListener("load", (e) => {
-                let keys = Array.from(terms.keys())
+                let keys = Object.keys(terms)
                 console.log(keys)
                 document.getElementById("term").innerHTML = "Cheese"
 
