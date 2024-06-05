@@ -37,20 +37,20 @@
 
             window.addEventListener("load", (e) => {
                 let keys = 0
-                for(let i = 0; i < 100000; i++)
+                for(let i = 0; i < 100000000; i++)
                 {
                     keys = Math.floor(Math.random() * Object.keys(terms).length)
-                    
+
                     if(keys == 10)
                     {
-                        console.log("DONE")
+                        console.log("10")
                     }
                 }
-                console.log(keys)
                 document.getElementById("term").innerHTML = "Cheese"
 
             })
 
+            console.log("Done")
 
             document.getElementById("butt").addEventListener("click", (e) =>{
                 document.getElementById("term").innerHTML = "Cheese"
