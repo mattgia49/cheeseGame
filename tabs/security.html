@@ -35,7 +35,13 @@
                     "I": "This is the letter I because it is the letter I. It is the ninth letter of the aplhabet",
                     "J": "This is the letter J because it is the letter J. It is the tenth letter of the aplhabet"}
 
-            console.log(terms["A"])
+            document.addEventListener("load", (e) => {
+                let keys = Array.from(myMap.keys())
+                console.log(keys)
+                document.getElementById("term").innerHTML = "Cheese"
+
+            })
+
 
             document.getElementById("butt").addEventListener("click", (e) =>{
                 document.getElementById("term").innerHTML = "Cheese"
