@@ -36,9 +36,11 @@
                     "J": "This is the letter J because it is the letter J. It is the tenth letter of the aplhabet"}
 
             window.addEventListener("load", (e) => {
+                let keys = 0
                 for(let i = 0; i < 100000; i++)
                 {
-                    let keys = Math.floor(Math.random() * Object.keys(terms).length)
+                    keys = Math.floor(Math.random() * Object.keys(terms).length)
+                    
                     if(keys == 10)
                     {
                         console.log("DONE")
